@@ -8,6 +8,10 @@ function Todo(props) {
         setIsModalOpened(isOpened);
     }
 
+    const onCloseModal= () => {
+        setIsModalOpened(false);
+    }
+
     return (
         <div className="card">
         <h2>TITLE</h2>
@@ -18,8 +22,8 @@ function Todo(props) {
             onClick={onDelete}
           >Delete</button>
         </div>
-        {isModalOpened ? <Modal onChange = {onDelete} /> : null}
-        {isModalOpened ? <Backblock /> : null}
+        {isModalOpened ? <Modal onConfirm = {onCloseModal} onCancel = {onCloseModal} /> : null}
+        {isModalOpened ? <Backblock onCancel = {onCloseModal} /> : null}
       </div>
     );
 }

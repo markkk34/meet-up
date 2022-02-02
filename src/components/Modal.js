@@ -2,11 +2,11 @@ import {useState} from 'react';
 
 function Modal(props) {
     const onConfirm = () => {
-        props.onChange(false)
+        props.onConfirm(false)
     }
 
     const onCancel = () => {
-        props.onChange(false);
+        props.onCancel(false);
     }
 
     return (

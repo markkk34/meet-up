@@ -1,6 +1,6 @@
-function Backblock() {
+function Backblock(props) {
     return (
-        <div className='backblock'/>
+        <div onClick={props.onCancel} className='backblock'/>
     );
 }
 
