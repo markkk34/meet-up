@@ -1,17 +1,27 @@
-import {Route, Routes, Switch} from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import AllMeetup from "./pages/AllMeetup";
 import NewMeetup from "./pages/NewMeetup";
 import Favorites from "./pages/Favorites";
+import Layout from './components/layout/Layout';
 
 function App() {
   return (
-      <div>
+      <Layout>
           <Routes>
-              <Route path='/' element={<AllMeetup />}/>
-              <Route path='/new-meetup' element={<NewMeetup />}/>
-              <Route path='/favorites' element={<Favorites />}/>
+              <Route 
+                path='/' 
+                element={<AllMeetup />}
+              />
+              <Route 
+                path='/new-meetup' 
+                element={<NewMeetup />}
+                />
+              <Route 
+                path='/favorites' 
+                element={<Favorites />}
+              />
           </Routes>
-      </div>
+      </Layout>
   );
 }
 
