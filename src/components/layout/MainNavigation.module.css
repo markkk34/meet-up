@@ -1,6 +1,8 @@
 .header {
     display: flex;
     flex-direction: row;
+    background-color: lightgrey;
+    padding: 10px;
 }
 
 .navigation-list {
@@ -9,6 +11,29 @@
 }
 
 .nav-item {
-    margin: 10px;
+    margin-left: 50px;
     list-style-type: none;
+}
+
+.logo {
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+a {
+    text-decoration: none;
+    color: #1c2329;
+    font-size: 18px;
+    transition: all .2s ease-in-out; 
+}
+
+a:hover {
+    transform: scale(1.1);
+}
+
+.navigation {
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
 }

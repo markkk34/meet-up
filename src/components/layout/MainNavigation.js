@@ -4,18 +4,26 @@ import NavigationStyles from './MainNavigation.module.css';
 const MainNavgation = () => {
     return (
         <header className={NavigationStyles.header}>
-            <div>Meetups</div>
-            <nav>
+            <div className={NavigationStyles.logo}>
+                <h2>Meetups</h2>
+            </div>
+            <nav className={NavigationStyles.navigation}>
                 <ul className={NavigationStyles['navigation-list']}>
-                    <li className={NavigationStyles['nav-item']}>
-                        <NavLink to='/'>All Meetups</NavLink>
-                    </li>
-                    <li className={NavigationStyles['nav-item']}>
-                        <NavLink to='/favorites'>Favorites</NavLink>
-                    </li>
-                    <li className={NavigationStyles['nav-item']}>
-                        <NavLink to='/new-meetup'>Add new meetup</NavLink>
-                    </li>
+                    <NavLink to='/'>
+                        <li className={NavigationStyles['nav-item']}>
+                            All Meetups
+                        </li>
+                    </NavLink>
+                    <NavLink to='/favorites'>
+                        <li className={NavigationStyles['nav-item']}>
+                            Favorites
+                        </li>
+                    </NavLink>
+                    <NavLink to='/new-meetup'>
+                        <li className={NavigationStyles['nav-item']}>
+                        Add new meetup
+                        </li>
+                    </NavLink>
                 </ul>
             </nav>
         </header>

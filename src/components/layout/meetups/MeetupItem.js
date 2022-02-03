@@ -1,12 +1,15 @@
 import Card from "../ui/Card";
+import MeetupItemStyles from './MeetupItem.module.css';
 
 const MeetupItem = (props) => {
     return (
-        <li key={props.id}>
+        <li key={props.id} className={MeetupItemStyles['meetup-item']}>
             <Card>
-                <h3>{props.title}</h3>
+                <div className={MeetupItemStyles.title}>
+                    <h3>{props.title}</h3>
+                </div>
                 <img src={props.image} alt={props.title} />
-                <div>
+                <div className={MeetupItemStyles.info}>
                     <address>{props.address}</address>
                     <p>{props.description}</p>
                 </div>

@@ -1,0 +1,14 @@
+img {
+    width: 350px;
+}
+
+.meetup-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-inline-start: 0;
+}
+
+li {
+    list-style-type: none;
+}
